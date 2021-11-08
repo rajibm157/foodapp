@@ -4,14 +4,19 @@ import { Container, Input, Button, GoogleLogin, AuthHeader } from "_components";
 import { Routes } from "_constants";
 import { Fonts, Colors, _styles } from "_styles";
 
-export default function LoginScreen({ navigation }) {
+export default function LoginScreen(props) {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handelLogin = () => {
+    props.login({ email, password });
+  };
 
   return (
     <Container>
       <AuthHeader
         button="Skip"
-        onPress={() => navigation.navigate(Routes.Signup)}
+        onPress={() => props.navigation.navigate(Routes.Signup)}
       />
       <View style={styles.container}>
         <Text style={styles.title}>Login to your account</Text>
@@ -31,17 +36,17 @@ export default function LoginScreen({ navigation }) {
             label="Password"
             placeholder="Enter password"
             //error="Can’t leave field empty"
-            onChange={(e) => setEmail(e)}
-            value={email}
+            onChange={(e) => setPassword(e)}
+            value={password}
             style={styles.footerLink}
           />
         </View>
         <GoogleLogin style={styles.googleButton} />
-        <Button title="Login" onPress={() => {}} />
+        <Button title="Login" onPress={handelLogin} />
         <Button
           title="Forgot your password?"
           secondary
-          onPress={() => navigation.navigate(Routes.Forgot)}
+          onPress={() => props.navigation.navigate(Routes.Forgot)}
           style={styles.footerLink}
         />
       </View>

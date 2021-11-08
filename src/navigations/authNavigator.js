@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { Routes } from "_constants";
 import Screens from "_screens";
+import { Login } from "_containers";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +13,7 @@ export default function AuthNavigator() {
       initial={Routes.Signup}
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name={Routes.Login} component={Screens.LoginScreen} />
+      <Stack.Screen name={Routes.Login} component={Login} />
       <Stack.Screen name={Routes.Signup} component={Screens.RegisterScreen} />
       <Stack.Screen
         name={Routes.Forgot}
