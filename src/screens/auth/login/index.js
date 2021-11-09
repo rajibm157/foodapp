@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Container, Input, Button, GoogleLogin, AuthHeader } from "_components";
-import { Routes } from "_constants";
-import { Fonts, Colors, _styles } from "_styles";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
+import { Routes } from '_constants';
+import { Fonts, Colors, _styles } from '_styles';
 
 export default function LoginScreen(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handelLogin = () => {
     props.login({ email, password });
@@ -21,7 +21,7 @@ export default function LoginScreen(props) {
       <View style={styles.container}>
         <Text style={styles.title}>Login to your account</Text>
         <Text style={styles.description}>
-          Good to see you again, enter your details{"\n"}below to continue
+          Good to see you again, enter your details{'\n'}below to continue
           ordering.
         </Text>
         <View style={styles.body}>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   googleButton: {
     marginBottom: 20,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   footerLink: {
     marginVertical: 20,

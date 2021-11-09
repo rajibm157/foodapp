@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Container, Input, Button, GoogleLogin, AuthHeader } from "_components";
-import { Routes } from "_constants";
-import { Fonts, Colors, _styles } from "_styles";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
+import { Routes } from '_constants';
+import { Fonts, Colors, _styles } from '_styles';
 
 export default function ForgotPasswordScreen({ navigation }) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   return (
     <Container>
@@ -13,7 +13,7 @@ export default function ForgotPasswordScreen({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.title}>Forgot password</Text>
         <Text style={styles.description}>
-          Enter your email address to request a{"\n"} password reset.
+          Enter your email address to request a{'\n'} password reset.
         </Text>
         <View style={styles.body}>
           <Input
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
   title: {
     ...Fonts.header1,
     color: Colors.FontColor,
-    textAlign: "center",
+    textAlign: 'center',
   },
   description: {
     marginTop: 15,
     ...Fonts.bodyRegular,
     color: Colors.FontColor,
-    textAlign: "center",
+    textAlign: 'center',
   },
   body: {
     marginTop: 50,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   googleButton: {
     marginBottom: 20,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   footerLink: {
     marginVertical: 20,

@@ -1,9 +1,9 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Routes } from "_constants";
-import Screens from "_screens";
-import { Login } from "_containers";
+import { Routes } from '_constants';
+import Screens from '_screens';
+import { Login } from '_containers';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,8 +11,7 @@ export default function AuthNavigator() {
   return (
     <Stack.Navigator
       initial={Routes.Signup}
-      screenOptions={{ headerShown: false }}
-    >
+      screenOptions={{ headerShown: false }}>
       <Stack.Screen name={Routes.Login} component={Login} />
       <Stack.Screen name={Routes.Signup} component={Screens.RegisterScreen} />
       <Stack.Screen

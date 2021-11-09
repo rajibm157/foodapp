@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Container, Input, Button, GoogleLogin, AuthHeader } from "_components";
-import { Routes } from "_constants";
-import { Fonts, Colors, _styles } from "_styles";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
+import { Routes } from '_constants';
+import { Fonts, Colors, _styles } from '_styles';
 
 export default function RegisterScreen({ navigation }) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   return (
     <Container>
@@ -16,7 +16,7 @@ export default function RegisterScreen({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.title}>Create an account</Text>
         <Text style={styles.description}>
-          Welcome friend, enter your details so lets get{"\n"}started in
+          Welcome friend, enter your details so lets get{'\n'}started in
           ordering food.
         </Text>
         <View style={styles.body}>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   googleButton: {
     marginBottom: 20,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
   footerLink: {
     marginVertical: 20,

@@ -35,8 +35,14 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^8.2.0",
+    "eslint-config-expo": "^6.0.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint-plugin-import": "^2.25.2",
+    "prettier": "^2.4.1"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "extends": "expo"
+  }
 }

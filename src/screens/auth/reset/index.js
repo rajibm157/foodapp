@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Container, Input, Button, AuthHeader } from "_components";
-import { Fonts, Colors, _styles } from "_styles";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Container, Input, Button, AuthHeader } from '_components';
+import { Fonts, Colors, _styles } from '_styles';
 
 export default function ResetPasswordScreen({ navigation }) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   return (
     <Container>
       <AuthHeader button="Cancel" onPress={() => navigation.goBack()} />
       <View style={styles.container}>
         <Text style={styles.title}>Reset Password</Text>
-        <Text style={styles.description}>
-          A reset code has been sent to your email
-        </Text>
+        <Text style={styles.description}>A reset code has been sent to your email</Text>
         <View style={styles.body}>
           <Input
             label="Email Address"
@@ -38,13 +36,13 @@ const styles = StyleSheet.create({
   title: {
     ...Fonts.header1,
     color: Colors.FontColor,
-    textAlign: "center",
+    textAlign: 'center',
   },
   description: {
     marginTop: 15,
     ...Fonts.bodyRegular,
     color: Colors.FontColor,
-    textAlign: "center",
+    textAlign: 'center',
   },
   body: {
     marginTop: 60,

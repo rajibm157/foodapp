@@ -1,9 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import { login } from "_actions/authAction";
+import { login } from '_actions/authAction';
 
 export const loadingSlice = createSlice({
-  name: "loading",
+  name: 'loading',
   initialState: {
     isLoading: false,
   },
