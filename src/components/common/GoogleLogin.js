@@ -1,7 +1,7 @@
-import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Images } from "_constants";
-import { Fonts, Colors, _styles } from "_styles";
+import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Images } from '_constants';
+import { Typography, Colors, _Styles } from '_styles';
 
 const GoogleLogin = ({ style, onPress }) => {
   return (
@@ -21,18 +21,18 @@ const styles = StyleSheet.create({
     width: 205,
     height: 50,
     borderRadius: 20,
-    ..._styles.rowAllCenter,
+    ..._Styles.rowAllCenter,
     backgroundColor: Colors.White,
   },
   image: {
     width: 24,
     height: 24,
-    resizeMode: "contain",
+    resizeMode: 'contain',
   },
   title: {
     marginLeft: 11,
-    ...Fonts.bodyRegular,
+    ...Typography.BodyRegular,
     color: Colors.FontColor,
-    textDecorationLine: "underline",
+    textDecorationLine: 'underline',
   },
 });

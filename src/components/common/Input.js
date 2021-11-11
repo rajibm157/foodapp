@@ -1,8 +1,8 @@
-import React from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import PropTypes from "prop-types";
-import Icon from "react-native-vector-icons/Feather";
-import { _styles, Fonts, Colors } from "_styles";
+import React from 'react';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import PropTypes from 'prop-types';
+import Icon from 'react-native-vector-icons/Feather';
+import { _Styles, Typography, Colors } from '_styles';
 
 const Input = ({
   label,
@@ -27,8 +27,7 @@ const Input = ({
               ? Colors.Primary
               : Colors.Shade3,
           },
-        ]}
-      >
+        ]}>
         <TextInput
           placeholder={placeholder}
           placeholderTextColor={Colors.Shade2}
@@ -63,10 +62,10 @@ export default Input;
 
 const styles = StyleSheet.create({
   main: {
-    width: "100%",
+    width: '100%',
   },
   title: {
-    ...Fonts.caption,
+    ...Typography.Caption,
     color: Colors.FontColor,
     paddingLeft: 23,
   },
@@ -79,17 +78,17 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.White,
   },
   inputBox: {
-    ...Fonts.bodyRegular,
+    ...Typography.BodyRegular,
     color: Colors.Shade1,
   },
   footer: {
     marginTop: 10,
     paddingLeft: 23,
-    ..._styles.rowCenter,
+    ..._Styles.rowCenter,
   },
   footerTitle: {
     marginLeft: 11,
-    ...Fonts.caption,
+    ...Typography.Caption,
     color: Colors.Primary,
   },
 });

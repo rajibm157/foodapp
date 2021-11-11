@@ -1,7 +1,7 @@
-import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Images } from "_constants";
-import { _styles, Colors, Fonts } from "_styles";
+import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Images } from '_constants';
+import { _Styles, Colors, Typography } from '_styles';
 
 const AuthHeader = ({ button, onPress }) => {
   return (
@@ -24,20 +24,20 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingVertical: 15,
     paddingHorizontal: 22,
-    ..._styles.rowCenterSpace,
+    ..._Styles.rowCenterSpace,
   },
   logo: {
     height: 24,
     width: 34,
-    resizeMode: "contain",
+    resizeMode: 'contain',
   },
   button: {
     minWidth: 50,
-    alignItems: "flex-end",
+    alignItems: 'flex-end',
   },
   buttonTitle: {
-    ...Fonts.bodyRegular,
+    ...Typography.BodyRegular,
     color: Colors.Primary,
-    textDecorationLine: "underline",
+    textDecorationLine: 'underline',
   },
 });

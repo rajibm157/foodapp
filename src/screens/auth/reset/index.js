@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Container, Input, Button, AuthHeader } from '_components';
-import { Fonts, Colors, _styles } from '_styles';
+import { Typography, Colors, _Styles } from '_styles';
 
 export default function ResetPasswordScreen({ navigation }) {
   const [email, setEmail] = useState('');
@@ -11,7 +11,9 @@ export default function ResetPasswordScreen({ navigation }) {
       <AuthHeader button="Cancel" onPress={() => navigation.goBack()} />
       <View style={styles.container}>
         <Text style={styles.title}>Reset Password</Text>
-        <Text style={styles.description}>A reset code has been sent to your email</Text>
+        <Text style={styles.description}>
+          A reset code has been sent to your email
+        </Text>
         <View style={styles.body}>
           <Input
             label="Email Address"
@@ -34,13 +36,13 @@ const styles = StyleSheet.create({
     paddingTop: 120,
   },
   title: {
-    ...Fonts.header1,
+    ...Typography.Header1,
     color: Colors.FontColor,
     textAlign: 'center',
   },
   description: {
     marginTop: 15,
-    ...Fonts.bodyRegular,
+    ...Typography.BodyRegular,
     color: Colors.FontColor,
     textAlign: 'center',
   },

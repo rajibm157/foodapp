@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
 import { Routes } from '_constants';
-import { Fonts, Colors, _styles } from '_styles';
+import { Typography, Colors, _Styles } from '_styles';
 
 export default function ForgotPasswordScreen({ navigation }) {
   const [email, setEmail] = useState('');
@@ -47,13 +47,13 @@ const styles = StyleSheet.create({
     paddingTop: 110,
   },
   title: {
-    ...Fonts.header1,
+    ...Typography.Header1,
     color: Colors.FontColor,
     textAlign: 'center',
   },
   description: {
     marginTop: 15,
-    ...Fonts.bodyRegular,
+    ...Typography.BodyRegular,
     color: Colors.FontColor,
     textAlign: 'center',
   },

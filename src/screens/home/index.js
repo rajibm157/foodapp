@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Colors, Fonts, _styles } from '_styles';
+import { Colors, Fonts, _Styles } from '_styles';
 
 export default function HomeScreen() {
   return (
