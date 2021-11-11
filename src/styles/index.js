@@ -1,6 +1,9 @@
-import * as Colors from "./colors";
-import Fonts from "./fonts";
-import SIZES from "./sizes";
-import _styles from "./styles";
+import Typography, { Fonts } from './fonts';
 
-export { Fonts, Colors, SIZES, _styles };
+import * as SIZES from './sizes';
+import * as Colors from './colors';
+import * as Mixins from './mixins';
+
+import _Styles from './styles';
+
+export { Fonts, Colors, SIZES, _Styles, Typography, Mixins };

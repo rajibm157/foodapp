@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Spinner } from '_components';
-import { Colors, Fonts } from '_styles';
+import { Colors, Typography, SIZES } from '_styles';
 
 export default function LoadingScreen() {
   return (
@@ -28,9 +28,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    marginTop: 5,
-    ...Fonts.header2,
+    ...Typography.Header2,
     color: Colors.Black,
     textAlign: 'center',
+    marginTop: SIZES.SCALE_10 / 2,
   },
 });
