@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: 'expo',
+  extends: 'universe',
   plugins: ['import'],
   settings: {
     'import/resolver': {

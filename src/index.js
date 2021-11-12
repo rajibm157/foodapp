@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-redux';
 
 import Navigator from '_navigations';
@@ -8,6 +9,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <Navigator />
+      <StatusBar style="auto" />
     </Provider>
   );
 }
