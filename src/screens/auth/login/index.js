@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
-import { Routes } from '_constants';
+import { Routes, Constants } from '_constants';
 import { Typography, Colors, _Styles } from '_styles';
 
 export default function LoginScreen(props) {
@@ -19,11 +19,8 @@ export default function LoginScreen(props) {
         onPress={() => props.navigation.navigate(Routes.Signup)}
       />
       <View style={styles.container}>
-        <Text style={styles.title}>Login to your account</Text>
-        <Text style={styles.description}>
-          Good to see you again, enter your details{'\n'}below to continue
-          ordering.
-        </Text>
+        <Text style={styles.title}>{Constants.login.title}</Text>
+        <Text style={styles.description}>{Constants.login.description}</Text>
         <View style={styles.body}>
           <Input
             label="Email Address"
@@ -42,9 +39,9 @@ export default function LoginScreen(props) {
           />
         </View>
         <GoogleLogin style={styles.googleButton} />
-        <Button title="Login" onPress={handelLogin} />
+        <Button title={Constants.login.button} onPress={handelLogin} />
         <Button
-          title="Forgot your password?"
+          title={Constants.login.link}
           secondary
           onPress={() => props.navigation.navigate(Routes.Forgot)}
           style={styles.footerLink}
