@@ -30,7 +30,8 @@
     "react-native-screens": "~3.8.0",
     "react-native-vector-icons": "^9.0.0",
     "react-native-web": "0.17.1",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "expo-app-loading": "~1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -45,6 +46,9 @@
   },
   "private": true,
   "eslintConfig": {
-    "extends": ["universe/node", "universe/web"]
+    "extends": [
+      "universe/node",
+      "universe/web"
+    ]
   }
 }
