@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   dotsContainer: {
+    height: 10,
     marginTop: 40,
     flexDirection: 'row',
     alignItems: 'center',
