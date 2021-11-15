@@ -2,6 +2,7 @@ import { Dimensions } from 'react-native';
 import { scaleSize, scaleFont } from './mixins';
 
 //For Spacing
+export const SCALE_45 = scaleSize(45);
 export const SCALE_18 = scaleSize(18);
 export const SCALE_16 = scaleSize(16);
 export const SCALE_12 = scaleSize(12);

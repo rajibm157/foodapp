@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Container, AuthHeader, Onboarding, Button } from '_components';
 import { Routes, Constants } from '_constants';
+import { SIZES } from '_styles';
 
 export default function OnboardingScreen({ navigation }) {
   return (
@@ -32,14 +33,14 @@ export default function OnboardingScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 40,
+    paddingTop: SIZES.SCALE_10 * 4,
   },
   body: {
     flex: 1,
-    padding: 20,
-    marginTop: 45,
+    padding: SIZES.SCALE_10 * 2,
+    marginTop: SIZES.SCALE_45,
   },
   footerLink: {
-    marginVertical: 20,
+    marginVertical: SIZES.SCALE_10 * 2,
   },
 });
