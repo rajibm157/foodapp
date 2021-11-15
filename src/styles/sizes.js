@@ -1,3 +1,4 @@
+import { Dimensions } from 'react-native';
 import { scaleSize, scaleFont } from './mixins';
 
 //For Spacing
@@ -22,3 +23,6 @@ export const LINE_HEIGHT_16 = scaleFont(16);
 // FONT WEIGHT
 export const FONT_WEIGHT_REGULAR = '400';
 export const FONT_WEIGHT_BOLD = '700';
+
+export const WINDOW_WIDTH = Dimensions.get('window').width;
+export const WINDOW_HEIGHT = Dimensions.get('window').height;

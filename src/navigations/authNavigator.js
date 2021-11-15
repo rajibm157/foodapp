@@ -10,8 +10,12 @@ const Stack = createNativeStackNavigator();
 export default function AuthNavigator() {
   return (
     <Stack.Navigator
-      initial={Routes.Signup}
+      initial={Routes.Onboarding}
       screenOptions={{ headerShown: false }}>
+      <Stack.Screen
+        name={Routes.Onboarding}
+        component={Screens.OnboardingScreen}
+      />
       <Stack.Screen name={Routes.Login} component={Login} />
       <Stack.Screen name={Routes.Signup} component={Screens.RegisterScreen} />
       <Stack.Screen

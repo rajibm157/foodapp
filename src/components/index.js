@@ -7,3 +7,4 @@ export { default as Icons } from './common/Icons';
 
 //EXTERNAL COMPONENTS
 export { default as GoogleLogin } from './GoogleLogin';
+export { default as Onboarding } from './Onboarding';
