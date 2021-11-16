@@ -51,15 +51,15 @@ const getFonts = (type) => {
   }
 };
 
-const Icons = ({ type, ...props }) => {
+const Icon = ({ type, ...props }) => {
   const FontIcon = getFonts(type);
 
   return <FontIcon {...props} />;
 };
 
-Icons.propTypes = {
+Icon.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };
 
-export default Icons;
+export default Icon;
