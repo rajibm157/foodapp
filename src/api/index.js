@@ -1,12 +1,12 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
-import { localStorage, log, setTokens } from '_utils';
+import { localStorage, setTokens } from '_utils';
 import { URL } from '_config';
 
 const API = axios.create({
   baseURL: URL,
-  timeout: 3000,
+  timeout: 10000,
   responseType: 'json',
   headers: { 'Content-Type': 'application/json' },
 });
@@ -15,15 +15,14 @@ const API = axios.create({
 const refreshToken = async () => {
   try {
     const resToken = await localStorage.getItem('refreshToken');
-    const { data } = await axios.post(URL + '/user/refresh_token', {
+    const { data } = await axios.post(URL + '/refresh', {
       token: resToken,
     });
     //set the refresh token and access token in the localStorage
     await setTokens(data.refreshToken, data.accessToken);
     return data;
   } catch (error) {
-    log(error);
-    return null;
+    return error;
   }
 };
 
@@ -38,6 +37,9 @@ API.interceptors.request.use(
       if (decodeToken.exp * 1000 < currentDate.getTime()) {
         // If token expire then get the new access token
         let res = await refreshToken();
+        if (!res.accessToken) {
+          return Promise.reject(res);
+        }
         config.headers.Authorization = 'Bearer ' + res.accessToken;
       } else {
         // If token not expire then set the token

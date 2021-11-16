@@ -1,7 +1,8 @@
 import * as localStorage from './localStorage';
 
-export function log(params, type = null) {
-  console.log(type, params);
+//This method is used for log in console
+export function log(...params) {
+  console.log(...params);
 }
 
 /**

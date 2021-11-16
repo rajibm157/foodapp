@@ -9,7 +9,7 @@ export default function LoginScreen(props) {
   const [password, setPassword] = useState('');
 
   const handelLogin = () => {
-    props.login({ email, password });
+    props.login({ username: email, password });
   };
 
   return (
