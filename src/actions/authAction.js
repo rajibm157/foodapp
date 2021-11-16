@@ -1,13 +1,15 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import Services from "_services";
+import Services from '_services';
+import { setTokens } from '_utils';
 
 export const login = createAsyncThunk(
-  "auth/login",
+  'auth/login',
   async (params, { rejectWithValue }) => {
     try {
       const response = await Services.signIn(params);
-      return response.data;
+      await setTokens(response.data.refreshToken, response.data.accessToken);
+      return response.data.user;
     } catch (err) {
       let error = err; // cast the error for access
       if (!error.response) {
