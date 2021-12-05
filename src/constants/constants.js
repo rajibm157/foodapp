@@ -25,6 +25,14 @@ const Constants = {
     button: 'Login',
     link: 'Forgot your password?',
   },
+  sidebar: {
+    profile: 'My profile',
+    payment: 'Payment method',
+    settings: 'Settings',
+    help: 'Help',
+    policy: 'Privacy policy',
+    button: 'Log Out',
+  },
 };
 
 export default Constants;

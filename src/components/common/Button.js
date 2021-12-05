@@ -42,10 +42,11 @@ export default Button;
 
 const styles = StyleSheet.create({
   main: {
+    height: 58,
     width: '100%',
   },
   button: {
-    padding: 20,
+    flex: 1,
     ..._Styles.allCenter,
     borderRadius: 20,
   },
