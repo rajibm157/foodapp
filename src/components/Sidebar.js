@@ -7,7 +7,7 @@ import { logout } from '_features/authSlice';
 import { Images, Constants } from '_constants';
 import { Colors, Typography, SIZES } from '_styles';
 
-const Sidebar = ({ navigation }) => {
+const Sidebar = (props) => {
   const dispatch = useDispatch();
 
   return (
@@ -18,7 +18,7 @@ const Sidebar = ({ navigation }) => {
         {/* Close Button */}
         <TouchableOpacity
           style={styles.closeButton}
-          onPress={() => navigation.closeDrawer()}>
+          onPress={() => props.navigation.closeDrawer()}>
           <Icon name="close" type="ionic" size={30} />
         </TouchableOpacity>
         {/* Header */}
