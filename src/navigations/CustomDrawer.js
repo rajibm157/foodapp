@@ -10,7 +10,7 @@ import Animated from 'react-native-reanimated';
 const Drawer = createDrawerNavigator();
 
 const CustomDrawer = () => {
-  const [progress, setProgress] = React.useState(new Animated.Value(0));
+  const [progress, setProgress] = useState(new Animated.Value(0));
 
   const scale = Animated.interpolateNode(progress, {
     inputRange: [0, 1],
@@ -33,14 +33,10 @@ const CustomDrawer = () => {
           overlayColor: 'transparent',
           drawerStyle: styles.drawer,
           sceneContainerStyle: styles.drawerContainer,
-          drawerContentContainerStyle: { flex: 1 },
-          drawerActiveBackgroundColor: 'transparent',
         }}
-        useLegacyImplementation={true}
-        drawerContent={(props) => {
-          setTimeout(() => setProgress(props.progress), 0);
-          return <Sidebar {...props} />;
-        }}
+        drawerContent={(props) => (
+          <Sidebar {...props} setProgress={setProgress} />
+        )}
         initialRouteName="Dwawer">
         <Drawer.Screen name="Dwawer">
           {(props) => (
@@ -61,7 +57,7 @@ const styles = StyleSheet.create({
   },
   drawer: {
     flex: 1,
-    width: '65%',
+    width: '50%',
     paddingRight: 20,
     backgroundColor: 'transparent',
   },

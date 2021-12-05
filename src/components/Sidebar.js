@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-import { DrawerContentScrollView } from '@react-navigation/drawer';
+import {
+  DrawerContentScrollView,
+  useDrawerProgress,
+} from '@react-navigation/drawer';
 import { useDispatch } from 'react-redux';
 import { Icon, Button } from '_common';
 import { logout } from '_features/authSlice';
@@ -9,6 +12,9 @@ import { Colors, Typography, SIZES } from '_styles';
 
 const Sidebar = (props) => {
   const dispatch = useDispatch();
+  const progress = useDrawerProgress();
+
+  useEffect(() => props.setProgress(progress), []);
 
   return (
     <DrawerContentScrollView
