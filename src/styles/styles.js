@@ -35,7 +35,7 @@ const _Styles = StyleSheet.create({
     elevation: 3,
   },
   link: {
-    ...Fonts.button,
+    ...Fonts.Button,
     color: Colors.Primary,
   },
 });

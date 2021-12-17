@@ -5,12 +5,14 @@ import { _Styles, Colors, Typography } from '_styles';
 
 const AuthHeader = ({ button, onPress }) => {
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, _Styles.rowCenterSpace]}>
       <View style={styles.button} />
       <Image source={Images.logo} style={styles.logo} />
       <TouchableOpacity onPress={onPress}>
         <View style={styles.button}>
-          <Text style={styles.buttonTitle}>{button}</Text>
+          <Text style={[Typography.BodyRegular, styles.buttonTitle]}>
+            {button}
+          </Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -24,7 +26,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingVertical: 15,
     paddingHorizontal: 22,
-    ..._Styles.rowCenterSpace,
   },
   logo: {
     height: 24,
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   buttonTitle: {
-    ...Typography.BodyRegular,
     color: Colors.Primary,
     textDecorationLine: 'underline',
   },

@@ -9,15 +9,16 @@ const Button = ({ title, onPress, disabled, secondary, style }) => {
     <TouchableOpacity onPress={onPress} disabled={disabled}>
       <View style={[styles.main, style]}>
         {secondary ? (
-          <Text style={styles.buttonTitle}>{title}</Text>
+          <Text style={[Typography.Button, styles.buttonTitle]}>{title}</Text>
         ) : (
           <LinearGradient
             colors={disabled ? [Colors.Shade3, Colors.Shade3] : Colors.Gradient}
             start={{ x: 0, y: 1 }}
             end={{ x: 1, y: 1 }}
-            style={styles.button}>
+            style={[_Styles.allCenter, styles.button]}>
             <Text
               style={[
+                Typography.BodyRegular,
                 styles.title,
                 { color: disabled ? Colors.Shade2 : Colors.White },
               ]}>
@@ -47,16 +48,13 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    ..._Styles.allCenter,
     borderRadius: 20,
   },
   title: {
-    ...Typography.BodyRegular,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   buttonTitle: {
-    ...Typography.Button,
     textAlign: 'center',
     color: Colors.Primary,
   },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Animated, Image, StyleSheet, Text, View } from 'react-native';
-import { Colors, Typography, SIZES } from '_styles';
+import { Colors, Typography, SIZES, _Styles } from '_styles';
 
 const Onboarding = ({ data }) => {
   const scrollX = new Animated.Value(0);
@@ -21,13 +21,15 @@ const Onboarding = ({ data }) => {
         )}
         showsHorizontalScrollIndicator={false}>
         {data.map(({ title, image }, mainIndex) => (
-          <View style={styles.body} key={mainIndex.toString()}>
-            <Text style={styles.title}>{title}</Text>
+          <View
+            style={[_Styles.allCenter, styles.body]}
+            key={mainIndex.toString()}>
+            <Text style={[Typography.Header1, styles.title]}>{title}</Text>
             <Image source={image} style={styles.image} />
           </View>
         ))}
       </Animated.ScrollView>
-      <View style={styles.dotsContainer}>
+      <View style={[styles.dotsContainer, _Styles.rowAllCenter]}>
         {data.map((item, index) => {
           const opacity = dotPosition.interpolate({
             inputRange: [index - 1, index, index + 1],
@@ -71,12 +73,9 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     width: SIZES.WINDOW_WIDTH,
   },
   title: {
-    ...Typography.Header1,
     textAlign: 'center',
     color: Colors.FontColor,
   },
@@ -89,9 +88,6 @@ const styles = StyleSheet.create({
   dotsContainer: {
     height: 10,
     marginTop: 40,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   dots: {
     borderRadius: 5,

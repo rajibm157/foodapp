@@ -11,8 +11,8 @@ export default function ForgotPasswordScreen({ navigation }) {
     <Container>
       <AuthHeader button="Cancel" onPress={() => navigation.goBack()} />
       <View style={styles.container}>
-        <Text style={styles.title}>Forgot password</Text>
-        <Text style={styles.description}>
+        <Text style={[Typography.Header1, styles.title]}>Forgot password</Text>
+        <Text style={[Typography.BodyRegular, styles.description]}>
           Enter your email address to request a{'\n'} password reset.
         </Text>
         <View style={styles.body}>
@@ -47,13 +47,11 @@ const styles = StyleSheet.create({
     paddingTop: 110,
   },
   title: {
-    ...Typography.Header1,
     color: Colors.FontColor,
     textAlign: 'center',
   },
   description: {
     marginTop: 15,
-    ...Typography.BodyRegular,
     color: Colors.FontColor,
     textAlign: 'center',
   },

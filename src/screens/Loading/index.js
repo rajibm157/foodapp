@@ -8,7 +8,7 @@ export default function LoadingScreen() {
     <View style={styles.container}>
       <View style={styles.body}>
         <Spinner />
-        <Text style={styles.title}>Loading...</Text>
+        <Text style={[Typography.Header2, styles.title]}>Loading...</Text>
       </View>
     </View>
   );
@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    ...Typography.Header2,
     color: Colors.Black,
     textAlign: 'center',
     marginTop: SIZES.SCALE_10 / 2,

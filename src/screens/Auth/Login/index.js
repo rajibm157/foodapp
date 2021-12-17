@@ -19,8 +19,12 @@ export default function LoginScreen(props) {
         onPress={() => props.navigation.navigate(Routes.Signup)}
       />
       <View style={styles.container}>
-        <Text style={styles.title}>{Constants.login.title}</Text>
-        <Text style={styles.description}>{Constants.login.description}</Text>
+        <Text style={[Typography.Header1, styles.title]}>
+          {Constants.login.title}
+        </Text>
+        <Text style={[Typography.BodyRegular, styles.description]}>
+          {Constants.login.description}
+        </Text>
         <View style={styles.body}>
           <Input
             label="Email Address"
@@ -58,13 +62,11 @@ const styles = StyleSheet.create({
     paddingTop: 45,
   },
   title: {
-    ...Typography.Header1,
     color: Colors.FontColor,
     paddingLeft: 24,
   },
   description: {
     marginTop: 15,
-    ...Typography.BodyRegular,
     color: Colors.FontColor,
     paddingLeft: 24,
   },

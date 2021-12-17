@@ -6,9 +6,11 @@ import { Typography, Colors, _Styles } from '_styles';
 const GoogleLogin = ({ style, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={[styles.main, style]}>
+      <View style={[styles.main, _Styles.rowAllCenter, style]}>
         <Image source={Images.google} style={styles.image} />
-        <Text style={styles.title}>Sign-in with Google</Text>
+        <Text style={[Typography.BodyRegular, styles.title]}>
+          Sign-in with Google
+        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -21,7 +23,6 @@ const styles = StyleSheet.create({
     width: 205,
     height: 50,
     borderRadius: 20,
-    ..._Styles.rowAllCenter,
     backgroundColor: Colors.White,
   },
   image: {
@@ -31,7 +32,6 @@ const styles = StyleSheet.create({
   },
   title: {
     marginLeft: 11,
-    ...Typography.BodyRegular,
     color: Colors.FontColor,
     textDecorationLine: 'underline',
   },

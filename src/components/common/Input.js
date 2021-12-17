@@ -16,7 +16,7 @@ const Input = ({
 }) => {
   return (
     <View style={[styles.main, style]}>
-      <Text style={styles.title}>{label}</Text>
+      <Text style={[Typography.Caption, styles.title]}>{label}</Text>
       <View
         style={[
           styles.body,
@@ -33,14 +33,14 @@ const Input = ({
           placeholderTextColor={Colors.Shade2}
           value={value}
           onChangeText={onChange}
-          style={styles.inputBox}
+          style={[styles.inputBox, Typography.BodyRegular]}
           secureTextEntry={secureTextEntry}
         />
       </View>
       {!success && error && (
-        <View style={styles.footer}>
+        <View style={[styles.footer, _Styles.rowCenter]}>
           <Icon name="alert-triangle" size={24} color={Colors.Primary} />
-          <Text style={styles.footerTitle}>{error}</Text>
+          <Text style={[styles.footerTitle, Typography.Caption]}>{error}</Text>
         </View>
       )}
     </View>
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   title: {
-    ...Typography.Caption,
     color: Colors.FontColor,
     paddingLeft: 23,
   },
@@ -78,17 +77,14 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.White,
   },
   inputBox: {
-    ...Typography.BodyRegular,
     color: Colors.Shade1,
   },
   footer: {
     marginTop: 10,
     paddingLeft: 23,
-    ..._Styles.rowCenter,
   },
   footerTitle: {
     marginLeft: 11,
-    ...Typography.Caption,
     color: Colors.Primary,
   },
 });

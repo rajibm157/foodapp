@@ -30,31 +30,55 @@ const Sidebar = (props) => {
         {/* Header */}
         <View style={styles.header}>
           <Image source={Images.sidebarPic} />
-          <Text style={styles.title}>Marvis Ighedosa</Text>
-          <Text style={styles.description}>dosamarvis@gmail.com</Text>
+          <Text style={[Typography.Header2, styles.title]}>
+            Marvis Ighedosa
+          </Text>
+          <Text style={[Typography.BodyRegular, styles.description]}>
+            dosamarvis@gmail.com
+          </Text>
         </View>
         {/* Body */}
         <TouchableOpacity style={styles.body}>
           <Icon type="fontAwesome" name="user-o" size={24} />
-          <Text style={[styles.description, styles.itemTitle]}>
+          <Text
+            style={[
+              Typography.BodyRegular,
+              styles.description,
+              styles.itemTitle,
+            ]}>
             {Constants.sidebar.profile}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.body}>
           <Icon type="materialIcons" name="work-outline" size={24} />
-          <Text style={[styles.description, styles.itemTitle]}>
+          <Text
+            style={[
+              Typography.BodyRegular,
+              styles.description,
+              styles.itemTitle,
+            ]}>
             {Constants.sidebar.payment}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.body}>
           <Icon type="ionicon" name="settings-outline" size={24} />
-          <Text style={[styles.description, styles.itemTitle]}>
+          <Text
+            style={[
+              Typography.BodyRegular,
+              styles.description,
+              styles.itemTitle,
+            ]}>
             {Constants.sidebar.settings}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.body}>
           <Icon type="ionicon" name="chatbubble-ellipses-outline" size={24} />
-          <Text style={[styles.description, styles.itemTitle]}>
+          <Text
+            style={[
+              Typography.BodyRegular,
+              styles.description,
+              styles.itemTitle,
+            ]}>
             {Constants.sidebar.help}
           </Text>
         </TouchableOpacity>
@@ -64,7 +88,12 @@ const Sidebar = (props) => {
             name="note-text-outline"
             size={24}
           />
-          <Text style={[styles.description, styles.itemTitle]}>
+          <Text
+            style={[
+              Typography.BodyRegular,
+              styles.description,
+              styles.itemTitle,
+            ]}>
             {Constants.sidebar.policy}
           </Text>
         </TouchableOpacity>
@@ -102,12 +131,10 @@ const styles = StyleSheet.create({
     marginBottom: SIZES.SCALE_10,
   },
   title: {
-    ...Typography.Header2,
     color: Colors.Black,
     marginBottom: SIZES.SCALE_10 / 2,
   },
   description: {
-    ...Typography.BodyRegular,
     color: Colors.Black,
   },
   body: {

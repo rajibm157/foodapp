@@ -14,8 +14,10 @@ export default function RegisterScreen({ navigation }) {
         onPress={() => navigation.navigate(Routes.Signup)}
       />
       <View style={styles.container}>
-        <Text style={styles.title}>Create an account</Text>
-        <Text style={styles.description}>
+        <Text style={[Typography.Header1, styles.title]}>
+          Create an account
+        </Text>
+        <Text style={[Typography.BodyRegular, styles.description]}>
           Welcome friend, enter your details so lets get{'\n'}started in
           ordering food.
         </Text>
@@ -63,13 +65,11 @@ const styles = StyleSheet.create({
     paddingTop: 45,
   },
   title: {
-    ...Typography.Header1,
     color: Colors.FontColor,
     paddingLeft: 24,
   },
   description: {
     marginTop: 15,
-    ...Typography.BodyRegular,
     color: Colors.FontColor,
     paddingLeft: 24,
   },

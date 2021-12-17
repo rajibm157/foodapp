@@ -8,7 +8,11 @@ export const login = createAsyncThunk(
   async (params, { rejectWithValue }) => {
     try {
       await localStorage.clear();
-      const response = await Services.signIn(params);
+      //const response = await Services.signIn(params);
+      const response = {
+        data: { refreshToken: params.username, accessToken: params.password },
+        user: params,
+      };
       await setTokens(response.data.refreshToken, response.data.accessToken);
       return response.data.user;
     } catch (err) {

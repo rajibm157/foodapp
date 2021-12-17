@@ -10,8 +10,8 @@ export default function ResetPasswordScreen({ navigation }) {
     <Container>
       <AuthHeader button="Cancel" onPress={() => navigation.goBack()} />
       <View style={styles.container}>
-        <Text style={styles.title}>Reset Password</Text>
-        <Text style={styles.description}>
+        <Text style={[Typography.Header1, styles.title]}>Reset Password</Text>
+        <Text style={[Typography.BodyRegular, styles.description]}>
           A reset code has been sent to your email
         </Text>
         <View style={styles.body}>
@@ -36,13 +36,11 @@ const styles = StyleSheet.create({
     paddingTop: 120,
   },
   title: {
-    ...Typography.Header1,
     color: Colors.FontColor,
     textAlign: 'center',
   },
   description: {
     marginTop: 15,
-    ...Typography.BodyRegular,
     color: Colors.FontColor,
     textAlign: 'center',
   },
