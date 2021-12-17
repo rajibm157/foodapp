@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
-import { Sidebar } from '_components';
-import Screens from '_screens';
-import { Colors } from '_styles';
 import Animated from 'react-native-reanimated';
+import TabNavigator from './TabNavigator';
+import { Sidebar } from '_components';
+import { Colors } from '_styles';
 
 const Drawer = createDrawerNavigator();
 
@@ -39,9 +38,7 @@ const CustomDrawer = () => {
         )}
         initialRouteName="Dwawer">
         <Drawer.Screen name="Dwawer">
-          {(props) => (
-            <Screens.HomeScreen {...props} animatedStyle={animatedStyle} />
-          )}
+          {(props) => <TabNavigator {...props} style={animatedStyle} />}
         </Drawer.Screen>
       </Drawer.Navigator>
     </View>
