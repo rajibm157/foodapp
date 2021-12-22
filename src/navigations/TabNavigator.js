@@ -1,62 +1,90 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import Animated from 'react-native-reanimated';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Screens from '_screens';
 import { Icon } from '_common';
-import { Colors } from '_styles';
+import { Routes } from '_constants';
+import { Home, Cart, Notifications, Orders, Search } from '_containers';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = ({ style }) => {
+const TabNavigator = () => {
   return (
-    <Animated.View style={[styles.container, { ...style }]}>
-      <Tab.Navigator
-        initialRouteName="Feed"
-        screenOptions={{
-          tabBarActiveTintColor: '#e91e63',
-        }}>
-        <Tab.Screen
-          name="Home"
-          component={Screens.HomeScreen}
-          options={{
-            tabBarLabel: 'Home',
-            tabBarIcon: ({ color, size }) => (
-              <Icon
-                type="materialCommunityIcons"
-                name="home"
-                color={color}
-                size={size}
-              />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Settings"
-          component={Screens.HomeScreen}
-          options={{
-            tabBarLabel: 'Profile',
-            tabBarIcon: ({ color, size }) => (
-              <Icon
-                type="materialCommunityIcons"
-                name="account"
-                color={color}
-                size={size}
-              />
-            ),
-          }}
-        />
-      </Tab.Navigator>
-    </Animated.View>
+    <Tab.Navigator
+      initialRouteName={Routes.Home}
+      screenOptions={{
+        tabBarActiveTintColor: '#e91e63',
+      }}>
+      <Tab.Screen
+        name={Routes.Home}
+        component={Home}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              type="materialCommunityIcons"
+              name="home"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={Routes.Orders}
+        component={Orders}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              type="materialCommunityIcons"
+              name="home"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={Routes.Search}
+        component={Search}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              type="materialCommunityIcons"
+              name="home"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={Routes.Notifications}
+        component={Notifications}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              type="materialCommunityIcons"
+              name="home"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name={Routes.Cart}
+        component={Cart}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              type="materialCommunityIcons"
+              name="account"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 };
 
 export default TabNavigator;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    overflow: 'hidden',
-    backgroundColor: Colors.White,
-  },
-});

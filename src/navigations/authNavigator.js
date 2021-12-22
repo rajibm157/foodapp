@@ -1,9 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import { Routes } from '_constants';
+import { Login, Forgot, Register, Reset, Verification } from '_containers';
 import Screens from '_screens';
-import { Login } from '_containers';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,15 +16,10 @@ export default function AuthNavigator() {
         component={Screens.OnboardingScreen}
       />
       <Stack.Screen name={Routes.Login} component={Login} />
-      <Stack.Screen name={Routes.Signup} component={Screens.RegisterScreen} />
-      <Stack.Screen
-        name={Routes.Forgot}
-        component={Screens.ForgotPasswordScreen}
-      />
-      <Stack.Screen
-        name={Routes.Reset}
-        component={Screens.ResetPasswordScreen}
-      />
+      <Stack.Screen name={Routes.Signup} component={Register} />
+      <Stack.Screen name={Routes.Forgot} component={Forgot} />
+      <Stack.Screen name={Routes.Reset} component={Reset} />
+      <Stack.Screen name={Routes.Verification} component={Verification} />
     </Stack.Navigator>
   );
 }

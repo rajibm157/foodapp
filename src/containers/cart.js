@@ -13,7 +13,4 @@ const mapDispatchToProps = (dispatch) => ({
   login: (data) => dispatch(AuthActions.login(data)),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Screens.RegisterScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(Screens.CartScreen);
