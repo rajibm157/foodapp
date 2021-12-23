@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
+import { Container, Input, Button, GoogleLogin, Headers } from '_components';
 import { Routes } from '_constants';
 import { Typography, Colors, _Styles } from '_styles';
 
@@ -9,7 +9,7 @@ export default function ForgotPasswordScreen({ navigation }) {
 
   return (
     <Container>
-      <AuthHeader button="Cancel" onPress={() => navigation.goBack()} />
+      <Headers auth button="Cancel" onPress={() => navigation.goBack()} />
       <View style={styles.container}>
         <Text style={[Typography.Header1, styles.title]}>Forgot password</Text>
         <Text style={[Typography.BodyRegular, styles.description]}>

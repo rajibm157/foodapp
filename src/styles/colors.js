@@ -5,6 +5,7 @@ export const Primary = '#FE554A';
 export const Accent = '#0B735F';
 
 export const FontColor = '#3D3D3D';
+export const SecondFontColor = '#1C1C1C';
 
 export const Background = '#F5FAFF';
 export const App_Modal = '#2E2E2EC4';

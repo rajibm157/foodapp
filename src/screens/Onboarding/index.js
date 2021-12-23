@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Container, AuthHeader, Onboarding, Button } from '_components';
+import { Container, Headers, Onboarding, Button } from '_components';
 import { Routes, Constants } from '_constants';
 import { SIZES } from '_styles';
 
 export default function OnboardingScreen({ navigation }) {
   return (
     <Container>
-      <AuthHeader
+      <Headers
+        auth
         button="Skip"
         onPress={() => navigation.navigate(Routes.Login)}
       />

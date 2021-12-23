@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
+import { Container, Input, Button, GoogleLogin, Headers } from '_components';
 import { Routes, Constants } from '_constants';
 import { Typography, Colors, _Styles } from '_styles';
 
-export default function LoginScreen(props) {
+export default function LoginScreen({ navigation, login }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handelLogin = () => {
-    props.login({ username: email, password });
+    login({ username: email, password });
   };
 
   return (
     <Container>
-      <AuthHeader
+      <Headers
+        auth
         button="Skip"
-        onPress={() => props.navigation.navigate(Routes.Signup)}
+        onPress={() => navigation.navigate(Routes.Signup)}
       />
       <View style={styles.container}>
         <Text style={[Typography.Header1, styles.title]}>
@@ -47,7 +48,7 @@ export default function LoginScreen(props) {
         <Button
           title={Constants.login.link}
           secondary
-          onPress={() => props.navigation.navigate(Routes.Forgot)}
+          onPress={() => navigation.navigate(Routes.Forgot)}
           style={styles.footerLink}
         />
       </View>

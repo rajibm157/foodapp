@@ -11,3 +11,6 @@ export { default as BuyIcon } from './Buy';
 export { default as HeartIcon } from './Heart';
 export { default as HomeIcon } from './Home';
 export { default as NotificationIcon } from './Notification';
+
+//Others
+export { default as MenuIcon } from './Menu';

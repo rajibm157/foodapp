@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container, Input, Button, GoogleLogin, AuthHeader } from '_components';
+import { Container, Input, Button, GoogleLogin, Headers } from '_components';
 import { Routes } from '_constants';
 import { Typography, Colors, _Styles } from '_styles';
 
@@ -9,7 +9,8 @@ export default function RegisterScreen({ navigation }) {
 
   return (
     <Container>
-      <AuthHeader
+      <Headers
+        auth
         button="Skip"
         onPress={() => navigation.navigate(Routes.Signup)}
       />

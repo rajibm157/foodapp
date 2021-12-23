@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Container, Input, Button, AuthHeader } from '_components';
+import { Container, Input, Button, Headers } from '_components';
 import { Typography, Colors, _Styles } from '_styles';
 
 export default function ResetPasswordScreen({ navigation }) {
@@ -8,7 +8,7 @@ export default function ResetPasswordScreen({ navigation }) {
 
   return (
     <Container>
-      <AuthHeader button="Cancel" onPress={() => navigation.goBack()} />
+      <Headers auth button="Cancel" onPress={() => navigation.goBack()} />
       <View style={styles.container}>
         <Text style={[Typography.Header1, styles.title]}>Reset Password</Text>
         <Text style={[Typography.BodyRegular, styles.description]}>
