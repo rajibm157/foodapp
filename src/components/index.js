@@ -1,3 +1,5 @@
+import * as Icons from './Icons';
+
 export { default as AuthHeader } from './common/AuthHeader';
 export { default as Button } from './common/Button';
 export { default as Container } from './common/Container';
@@ -11,3 +13,5 @@ export { default as GoogleLogin } from './shared/GoogleLogin';
 //EXTERNAL COMPONENTS
 export { default as Onboarding } from './Onboarding';
 export { default as Sidebar } from './Sidebar';
+
+export { Icons };

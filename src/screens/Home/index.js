@@ -1,28 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Animated from 'react-native-reanimated';
+import { Colors } from '_styles';
 
-export default function HomeScreen({ animatedStyle }) {
+export default function HomeScreen() {
   return (
-    <Animated.View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#ffffff',
-        ...animatedStyle,
-      }}>
+    <View style={styles.container}>
       <Text>Home Screen</Text>
-    </Animated.View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors.Background,
   },
 });

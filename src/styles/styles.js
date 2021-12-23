@@ -32,7 +32,14 @@ const _Styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   shadow: {
-    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
   },
   link: {
     ...Fonts.Button,
