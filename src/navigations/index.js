@@ -18,6 +18,8 @@ export default function Navigator() {
       const isLogin = await getToken();
       if (isLogin) {
         dispatch(checkLogin(true));
+      } else {
+        dispatch(checkLogin(false));
       }
     }
 

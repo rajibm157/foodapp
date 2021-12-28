@@ -17,7 +17,7 @@ const Product = ({ title, image, description, star, onPress }) => {
         </Text>
         <View style={[_Styles.rowCenterSpace, styles.footer]}>
           <View style={_Styles.rowCenter}>
-            <Icon type="antDesign" name="star" color="#F5A62E" size="15" />
+            <Icon type="antDesign" name="star" color="#F5A62E" size={15} />
             <Text style={[Typography.Caption, styles.footerTitle]}>
               {star}+
             </Text>
@@ -26,7 +26,7 @@ const Product = ({ title, image, description, star, onPress }) => {
             type="antDesign"
             name="heart"
             color={Colors.Primary}
-            size="15"
+            size={15}
           />
         </View>
       </View>

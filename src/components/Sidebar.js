@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   userLogo: {
     width: 80,
     height: 95,
-    resizeMode: 'content',
+    resizeMode: 'contain',
   },
   title: {
     color: Colors.Black,
