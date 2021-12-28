@@ -29,7 +29,7 @@ export default function HomeScreen({ navigation }) {
               <Category
                 title={item.name}
                 image={item.image}
-                active={selected === index ? true : false}
+                active={selected !== index ? false : true}
                 onPress={() => setSelected(index)}
               />
             )}

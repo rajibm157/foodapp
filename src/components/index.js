@@ -15,5 +15,6 @@ export { default as Onboarding } from './Onboarding';
 export { default as Sidebar } from './Sidebar';
 export { default as Category } from './Category';
 export { default as Product } from './Product';
+export { default as CartButton } from './CartButton';
 
 export { Icons };

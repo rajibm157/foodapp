@@ -1,24 +1,27 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import PropTypes from 'prop-types';
 import { Typography, Colors, _Styles, SIZES } from '_styles';
 
 const Category = ({ title, image, active, onPress }) => {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={[
-        styles.container,
-        _Styles.allCenter,
-        { opacity: active ? 1 : 0.5 },
-      ]}>
-      <View style={[_Styles.allCenter, styles.body]}>
-        <Image source={{ uri: image }} style={styles.image} />
-        <Text style={[Typography.Caption, styles.title]} numberOfLines={1}>
-          {title}
-        </Text>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View
+        style={[styles.main, _Styles.allCenter, { opacity: active ? 1 : 0.5 }]}>
+        <View style={[_Styles.allCenter, styles.body]}>
+          <Image source={{ uri: image }} style={styles.image} />
+          <Text style={[Typography.Caption, styles.title]} numberOfLines={1}>
+            {title}
+          </Text>
+        </View>
       </View>
-    </TouchableOpacity>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -32,15 +35,15 @@ Category.propTypes = {
 export default Category;
 
 const styles = StyleSheet.create({
-  container: {
+  main: {
     marginRight: SIZES.SCALE_18,
     borderWidth: 1,
     borderRadius: 50,
     borderColor: '#3EC032',
   },
   body: {
-    height: 95,
-    width: 70,
+    width: 80,
+    height: 108,
     padding: SIZES.SCALE_10 / 2,
     paddingTop: SIZES.SCALE_10,
     borderRadius: 50,
@@ -58,5 +61,6 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     color: Colors.Black,
+    marginTop: SIZES.SCALE_10 / 2,
   },
 });
