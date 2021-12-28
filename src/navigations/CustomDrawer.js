@@ -22,7 +22,21 @@ const CustomDrawer = () => {
     outputRange: [0, 26],
   });
 
-  const animatedStyle = { borderRadius, transform: [{ scale }] };
+  const borderWidth = Animated.interpolateNode(progress, {
+    inputRange: [0, 1],
+    outputRange: [0, 20],
+  });
+
+  const rotate = Animated.interpolateNode(progress, {
+    inputRange: [0, 1],
+    outputRange: ['360deg', '355deg'],
+  });
+
+  const animatedStyle = {
+    borderRadius,
+    borderWidth,
+    transform: [{ scale, rotate }],
+  };
 
   return (
     <View style={styles.container}>
