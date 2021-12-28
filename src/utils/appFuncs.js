@@ -20,3 +20,16 @@ export async function setTokens(refreshToken, accessToken) {
     return false;
   }
 }
+
+/**
+ * This method is used to check the token in localStorage.
+ * @param {*} null
+ * @returns true | false
+ */
+export async function getToken() {
+  try {
+    return await localStorage.getItem('token');
+  } catch (error) {
+    return false;
+  }
+}

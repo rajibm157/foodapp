@@ -27,6 +27,16 @@ export const Header2 = {
   letterSpacing: -0.03,
 };
 
+// HEADER 3 FONT STYLE
+export const Header3 = {
+  fontSize: SIZES.FONT_SIZE_16,
+  fontWeight: SIZES.FONT_WEIGHT_REGULAR,
+  fontFamily: Fonts.SUBFONT_FAMILY_BOLD,
+  fontStyle: 'normal',
+  lineHeight: SIZES.LINE_HEIGHT_20,
+  letterSpacing: -0.03,
+};
+
 // BODY REGULAR FONT STYLE
 export const BodyRegular = {
   fontSize: SIZES.FONT_SIZE_14,
@@ -56,4 +66,4 @@ export const Caption = {
   letterSpacing: -0.03,
 };
 
-export default { Header1, Header2, BodyRegular, Button, Caption };
+export default { Header1, Header2, Header3, BodyRegular, Button, Caption };

@@ -13,5 +13,7 @@ export { default as GoogleLogin } from './shared/GoogleLogin';
 //EXTERNAL COMPONENTS
 export { default as Onboarding } from './Onboarding';
 export { default as Sidebar } from './Sidebar';
+export { default as Category } from './Category';
+export { default as Product } from './Product';
 
 export { Icons };

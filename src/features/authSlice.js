@@ -4,6 +4,7 @@ import { login } from '_actions/authAction';
 
 const initialState = {
   isLogedIn: false,
+  isLoginCheck: true,
   user: {},
   error: {},
 };
@@ -12,6 +13,10 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
+    checkLogin: (state, action) => {
+      state.isLogedIn = action.payload;
+      state.isLoginCheck = false;
+    },
     logout: (state) => {
       state.isLogedIn = false;
     },
@@ -34,6 +39,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { logout, updateProfile } = authSlice.actions;
+export const { logout, updateProfile, checkLogin } = authSlice.actions;
 
 export default authSlice.reducer;

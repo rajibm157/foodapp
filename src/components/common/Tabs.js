@@ -24,6 +24,7 @@ export default Tabs;
 const styles = StyleSheet.create({
   main: {
     top: -20,
+    borderRadius: 30,
   },
   button: {
     width: 60,

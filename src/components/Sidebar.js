@@ -29,7 +29,7 @@ const Sidebar = (props) => {
         </TouchableOpacity>
         {/* Header */}
         <View style={styles.header}>
-          <Image source={Images.sidebarPic} />
+          <Image source={Images.sidebarPic} style={styles.userLogo} />
           <Text style={[Typography.Header2, styles.title]}>
             Marvis Ighedosa
           </Text>
@@ -129,6 +129,11 @@ const styles = StyleSheet.create({
   header: {
     marginTop: SIZES.SCALE_18,
     marginBottom: SIZES.SCALE_10,
+  },
+  userLogo: {
+    width: 80,
+    height: 95,
+    resizeMode: 'content',
   },
   title: {
     color: Colors.Black,
