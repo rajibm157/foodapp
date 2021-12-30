@@ -52,11 +52,12 @@ export default function HomeScreen({ navigation }) {
               showsHorizontalScrollIndicator={false}
               renderItem={({ item }) => (
                 <Product
+                  id={item.id}
                   title={item.title}
                   description={item.desc}
                   star="4"
-                  image={DATA.Category[0].image}
-                  onPress={() => navigation.navigate(Routes.Details, { item })}
+                  image={item.image}
+                  onPress={() => navigation.push(Routes.Details, { item })}
                 />
               )}
               keyExtractor={(_, index) => index.toString()}

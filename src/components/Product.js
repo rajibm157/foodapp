@@ -1,13 +1,16 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SharedElement } from 'react-navigation-shared-element';
 import PropTypes from 'prop-types';
 import { Icon } from '_common';
 import { Typography, Colors, _Styles, SIZES } from '_styles';
 
-const Product = ({ title, image, description, star, onPress }) => {
+const Product = ({ id, title, image, description, star, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Image source={{ uri: image }} style={styles.image} />
+      <SharedElement id={`item.${id}.photo`}>
+        <Image source={{ uri: image }} style={styles.image} />
+      </SharedElement>
       <View style={styles.body}>
         <Text style={[Typography.Header3, styles.title]} numberOfLines={1}>
           {title}

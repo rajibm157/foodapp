@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { SharedElement } from 'react-navigation-shared-element';
 import { Container, Headers, Icon, Button, CartButton } from '_components';
 import { Typography, Colors, _Styles, SIZES } from '_styles';
 
@@ -12,7 +13,9 @@ export default function DetailsScreen({ route }) {
       <Headers back />
       <View style={styles.container}>
         <View style={[_Styles.allCenter, styles.cardImage, _Styles.minShadow]}>
-          <Image source={{ uri: item.image }} style={styles.image} />
+          <SharedElement id={`item.${item.id}.photo`}>
+            <Image source={{ uri: item.image }} style={styles.image} />
+          </SharedElement>
         </View>
         <View style={styles.cartBtn}>
           <CartButton total={total} onPress={setTotal} />
